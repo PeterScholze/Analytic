@@ -2034,7 +2034,7 @@ R\Hom_{\mathbb Z[T^{-1}]}(\overline{\mathcal M}_{r'}(S),\widehat{V})
 as the derived inverse limit of $C_c^\bullet$ over all $c>0$; equivalently, all $c\geq c_0$. Theorem~\ref{thm:explicit2} implies that for any $m\geq 0$ the pro-system of cohomology groups $H^m(C_c^\bullet)$ is pro-zero (as $H^m(C_{kc}^\bullet)\to H^m(C_c^\bullet)$ is zero). Thus, the derived inverse limit vanishes, as desired.
 \end{proof}
 
-We remark that Theorem~\ref{thm:explicit2} reduces formally to the case that $S$ is finite; we make this reduction. We will prove Theorem~\ref{thm:explicit2} by induction on $m$. Unfortunately, the induction requires us to prove a stronger statement. This goes as follows. Consider any polyhedral lattice $\Lambda$, by which we mean a finite free abelian group equipped with a norm $||\cdot||_\Lambda: \Lambda\otimes \mathbb R\to \mathbb R$ (so $\Lambda\otimes \mathbb R$ is a Banach space) that is given by the supremum of finitely many linear functions on $\Lambda$ with rational coefficients; equivalently, the ``unit ball'' $\{\lambda\in \Lambda\otimes \mathbb R\mid ||\lambda||_\Lambda\leq 1\}$ is a rational polyhedron.
+We will prove Theorem~\ref{thm:explicit2} by induction on $m$. Unfortunately, the induction requires us to prove a stronger statement. This goes as follows. Consider any polyhedral lattice $\Lambda$, by which we mean a finite free abelian group equipped with a norm $||\cdot||_\Lambda: \Lambda\otimes \mathbb R\to \mathbb R$ (so $\Lambda\otimes \mathbb R$ is a Banach space) that is given by the supremum of finitely many linear functions on $\Lambda$ with rational coefficients; equivalently, the ``unit ball'' $\{\lambda\in \Lambda\otimes \mathbb R\mid ||\lambda||_\Lambda\leq 1\}$ is a rational polyhedron.
 
 Endow $\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))$ with the subspaces
 \[
@@ -2044,7 +2044,7 @@ As $\Lambda$ is polyhedral, it is enough to check the given condition for finite
 
 We can then define double complexes like \eqref{eq:doublecomplex}. Lemma~\ref{lem:Tinv} stays true with the same constants. Now we claim the following generalization of Theorem~\ref{thm:explicit2}.
 
-\begin{theorem}\label{thm:explicit3} Fix radii $1>r'>r>0$. For any $m$ there is some $k$ such that for all polyhedral lattices $\Lambda$ there is a constant $c_0(\Lambda)>0$ such that for all finite sets $S$ and all $r$-normed $\mathbb Z[T^{\pm 1}]$-modules $V$, the system of complexes
+\begin{theorem}\label{thm:explicit3} Fix radii $1>r'>r>0$. For any $m$ there is some $k$ such that for all polyhedral lattices $\Lambda$ there is a constant $c_0(\Lambda)>0$ such that for all profinite sets $S$ and all $r$-normed $\mathbb Z[T^{\pm 1}]$-modules $V$, the system of complexes
 \[
 C_{\Lambda,c}^\bullet: \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c})^{T^{-1}}\to \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c_1c}^2)^{T^{-1}}\to \ldots
 \]
@@ -2116,14 +2116,20 @@ Thus, consider the submonoid $\Lambda^\vee_+\subset \Lambda^\vee$ of all $x$ tha
 
 Now we have the key lemma:
 
-\begin{lemma}\label{lem:key} Let $\Lambda$ be a polyhedral lattice. Then for all positive integers $N$ there is a constant $d$ such that for all $c>0$ one can write any $x\in \Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c}$ as
+\begin{lemma}\label{lem:key} Let $\Lambda$ be a polyhedral lattice. Then for all positive integers $N$ there is a constant $d$ such that for all $c>0$ and all profinite sets $S$ one can write any $x\in \Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c}$ as
 \[
 x=x_1+\ldots+x_N
 \]
 where all $x_i\in \Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c/N+d}$.
 \end{lemma}
 
-\begin{proof} Pick $\lambda_1,\ldots,\lambda_m\in \Lambda$ generating the norm. We fix a finite subset $A\subset \Lambda^\vee$ satisfying the conclusion of the previous lemma. Write
+\begin{proof} The desired statement is equivalent to the surjectivity of the map of profinite sets
+\[
+\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c/N+d}^N\times_{\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c+Nd} \Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c}\to \Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c}.
+\]
+Note that, as a functor of $S$, both sides commute with cofiltered limits, so it is enough to handle finite $S$, by Tychonoff.
+
+Pick $\lambda_1,\ldots,\lambda_m\in \Lambda$ generating the norm. We fix a finite subset $A\subset \Lambda^\vee$ satisfying the conclusion of the previous lemma. Write, for finite $S$,
 \[
 x=\sum_{n\geq 1, s\in S} x_{n,s} T^n [s]
 \]
