@@ -2073,15 +2073,24 @@ M^{2,0}_c\ar[r]^{d'^{2,0}_c}\ar[d]^{d^{2,0}_c} & M^{2,1}_c\ar[r]^{d'^{2,1}_c}\ar
 \[
 ||h^q_{k'c}(x)||_{M^{1,q}_c}\leq H||x||_{M^{0,q+1}_{k'c}}
 \]
-for all $x\in M^{0,q+1}_{k'c}$, and such that for all $c\geq c_0$ and $x\in M^{0,q}_{k'^2c}$, one has
+for all $x\in M^{0,q+1}_{k'c}$, and such that for all $c\geq c_0$ and $q=0,\ldots,m$ the ``homotopic'' map
+\[
+\mathrm{res}_{k'^2c,k'c}^{1,q}\circ d^{0,q} + h^q_{k'^2c}\circ d'^{0,q}_{k'^2c} + d'^{1,q-1}_{k'c}\circ h^{q-1}_{k'^2c}: M^{0,q}_{k'^2c}\to M^{1,q}_{k'c}
+\]
+factors as a composite of the restriction $\mathrm{res}_{k'^2c,c}^{0,q}$ and a map
+\[
+\delta^{0,q}_c: M^{0,q}_c\to M^{1,q}_{k'c}
+\]
+that is a map of complexes (in degrees $\leq m$), and satisfies the estimate
 \begin{equation}\label{eq:homotopicmapsmall}
-||\mathrm{res}_{k'^2c,k'c}^{1,q}(d^{0,q}(x))\pm h^q_{k'^2c}(d'^{0,q}_{k'^2c}(x))\pm d'^{1,q-1}_{k'c}(h^{q-1}_{k'^2c}(x))||_{M^{1,q}_{k'c}}\leq \epsilon ||\mathrm{res}_{k'^2c,c}^{0,q}(x)||_{M^{0,q}_c}.
+||\delta^{0,q}_c(x)||_{M^{1,q}_{k'c}}\leq \epsilon ||x||_{M^{0,q}_c}.
 \end{equation}
+for all $x\in M^{0,q}_c$.
 \end{enumerate}
 Then the first row is $\leq \max(k'^2,2k_0H)$-exact in degrees $\leq m$ for $c\geq c_0$.
 \end{proposition}
 
-We note that the bound on the homotopy is of a peculiar nature, in that the bound only depends on a deep restriction of $x$.
+We note that the homotopy in (3) is bounded in two ways: On the one hand, the homotopic map factors over a deep restriction, and on the other hand its norm is bounded by $\epsilon$.
 
 \begin{proof} First, we treat the case $m=0$. If $m=0$, we claim that one can take $\epsilon=\tfrac 1{2k}$ and $k_0=k$. We have to prove exactness at the first step. Let $x_{k'^2c}\in M^{0,0}_{k'^2c}$ and denote $x_{k'c}=\mathrm{res}_{k'^2c,k'c}^{0,0}(x)$ and $x_c=\mathrm{res}_{k'^2c,c}^{0,0}(x)$. Then by assumption (2) (and $k'\geq k$), we have
 \[
@@ -2089,19 +2098,23 @@ We note that the bound on the homotopy is of a peculiar nature, in that the boun
 \]
 On the other hand, by (3),
 \[
-||\mathrm{res}_{k'^2c,k'c}^{1,0}(d^{0,0}_{k'^2c}(x))\pm h^0_{k'^2c}(d'^{0,0}_{k'^2c}(x))||_{M^{1,0}_{k'c}}\leq \epsilon ||x_c||_{M^{0,0}_c}.
+||\mathrm{res}_{k'^2c,k'c}^{1,0}(d^{0,0}_{k'^2c}(x))+ h^0_{k'^2c}(d'^{0,0}_{k'^2c}(x))||_{M^{1,0}_{k'c}}\leq \epsilon ||x_c||_{M^{0,0}_c},
 \]
-In particular, noting that $\mathrm{res}_{k'^2c,k'c}^{1,0}(d^{0,0}_{k'^2c}(x)) = d^{0,0}_{k'c}(x_{k'c})$, we get
+noting that the left-hand side agrees with $\delta^{0,0}_c(x_c)$ by assumption. In particular, noting that $\mathrm{res}_{k'^2c,k'c}^{1,0}(d^{0,0}_{k'^2c}(x)) = d^{0,0}_{k'c}(x_{k'c})$, we get
 \[
 ||x_c||_{M^{0,0}_c}\leq k||d^{0,0}_{k'c}(x_{k'c})||_{M^{1,0}_{k'c}}\leq k\epsilon ||x_c||_{M^{0,0}_c} + kH ||d'^{0,0}_{k'^2c}(x)||_{M^{0,1}_{k'^2c}}.
 \]
-Thus, taking $\epsilon=\tfrac 1{2k}$ as promised, this implies
+Thus, taking $\epsilon=\tfrac 1{2k}$ as promised, and bringing $\tfrac 12||x_c||_{M^{0,0}_c}$ to the left-hand side, this implies
 \[
 ||x_c||_{M^{0,0}_c}\leq 2kH ||d'^{0,0}_{k'^2c}(x)||_{M^{0,1}_{k'^2c}}.
 \]
 This gives the desired $\leq \max(k'^2,2k_0H)$-exactness in degrees $\leq m$ for $c\geq c_0$.
 
-Now we argue by induction on $m$. Consider the complex $N^{p,q}$ given by $M^{p,q+1}$ for $q\geq 1$ and $N^{p,0} = M^{p,1}/\overline{M^{p,0}}$ (the quotient by the closure of the image, which is also the completion of $M^{p,1}/M^{p,0}$), equipped with the quotient norm. Using the normed version of the snake lemma, Proposition~\ref{prop:snakelemma} in the appendix to this lecture, one checks that this satisfies the assumptions for $m-1$, with $k$ replaced by $\max(k^4,k^3+k+1)$.
+Now we argue by induction on $m$. Consider the complex $N^{p,q}$ given by $M^{p,q+1}$ for $q\geq 1$ and $N^{p,0} = M^{p,1}/\overline{M^{p,0}}$ (the quotient by the closure of the image, which is also the completion of $M^{p,1}/M^{p,0}$), equipped with the quotient norm. Using the normed version of the snake lemma, Proposition~\ref{prop:snakelemma} in the appendix to this lecture, one checks that this satisfies the assumptions for $m-1$, with $k$ replaced by $\max(k^4,k^3+k+1)$. To verify condition (3), note that the maps $\delta^{0,q}_c$ induce similar maps after passing to this quotient complex. To verify the estimate \eqref{eq:homotopicmapsmall}, note that it is nontrivial only for $N^{0,0} = M^{0,1}/\overline{M^{0,0}}$. In that case, for any given $a>0$ one can lift $x\in N^{0,0}_c$ to $\tilde{x}\in M^{0,1}_c$ with $||\tilde{x}||_{N^{0,0}_c}\leq ||x||_{M^{0,1}_c}+a$. This implies
+\[
+||\delta^{0,q}_c(x)||_{N^{1,0}_{k'c}}\leq ||\delta^{0,q}_c(\tilde{x})||_{M^{1,1}_{k'c}}\leq \epsilon ||\tilde{x}||_{M^{0,1}_c}\leq \epsilon ||x||_{M^{0,1}_c} + \epsilon a
+\]
+for all $a>0$, and hence the desired inequality by taking the infimum over all $a$.
 \end{proof}
 
 Finally, we can prove the key combinatorial lemma, ensuring that any element of $\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))$ can be decomposed into $N$ elements whose norm is roughly $\tfrac 1N$ of the original element. As preparation, we have the following simple result.
