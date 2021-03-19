@@ -1859,14 +1859,16 @@ As is well-known, the inclusions of complete into separated into all normed abel
 
 We often use the following exactness property:
 
-\begin{proposition}\label{prop:completeexact} Let $M'\xrightarrow{f} M\xrightarrow{g} M''$ be maps of normed abelian groups with $gf=0$ and such that for all $m\in \ker(M\to M'')$ there is some $m'\in M'$ with $f(m')=m$ with $||m'||\leq C||m||$.
+\begin{proposition}\label{prop:completeexact} Let $M_0\xrightarrow{d_0} M_1\xrightarrow{d_1} M_2\xrightarrow{d_2} M_3$ be a four-term complex of bounded maps of normed abelian groups. Assume that, for some positive constants $C$ and $D$, for all $y\in \ker(d_1: M_1\to M_2)$ there is some $x\in M_0$ with $d_0(x)=y$ and $||x||\leq C||y||$, and similarly for all $z\in \ker(d_2: M_2\to M_3)$, there is some $y\in M_1$ with $d_1(y)=z$ and $||y||\leq D||z||$.
 
-Then $\widehat{M'}\xrightarrow{\widehat{f}} \widehat{M}\xrightarrow{\widehat{g}} \widehat{M''}$ satisfy $\widehat{g}\widehat{f}=0$ and for all $m\in \ker(\widehat{M}\to \widehat{M''})$ and all $\epsilon>0$ there is some $m'\in \widehat{M'}$ with $\widehat{f}(\widehat{m'})=\widehat{m}$ and $||m'||\leq (C+\epsilon)||m||$.
+Then $\widehat{M}_0\xrightarrow{\widehat{d}_0} \widehat{M}_1\xrightarrow{\widehat{d}_1} \widehat{M}_2\xrightarrow{\widehat{d}_2} \widehat{M}_3$ is a complex, and for all $\widehat{y}\in \widehat{M}_1$ and all $\epsilon>0$ there is some $\widehat{x}\in \widehat{M}_0$ with $\widehat{d}_1(\widehat{x})=\widehat{y}$ and $||\widehat{x}||\leq (C+\epsilon)||\widehat{y}||$.
 \end{proposition}
 
-\begin{proof} One can write any element $m\in \widehat{M}$ as a sum $m_0+m_1+\ldots$ with $m_i\in M$ and $||m_i||\leq \epsilon_i$ for $i>0$ for any given sequence of positive numbers $\epsilon_1\geq \epsilon_2\geq \ldots$. Indeed, we can inductively choose the $m_i$ so that $||m-m_0-\ldots-m_i||\leq \tfrac 12 \epsilon_{i+1}$, in which case $||m_i||\leq \tfrac 12(\epsilon_i+\epsilon_{i+1})\leq \epsilon_i$. Taking the sequence of $\epsilon_i$'s sufficiently small so that $\sum_{i>0} \epsilon_i\leq \tfrac {||m||}{2C} \epsilon$, we can lift all $m_i$ to $m_i'$ with $||m_i'||\leq C||m_i||$, and then $m'=m_0'+m_1'+\ldots$ satisfies
+\begin{proof} First, we claim that $\ker(d_1: M_1\to M_2)$ is dense in $\ker(\widehat{d}_1: \widehat{M}_1\to \widehat{M}_2)$. Pick any $\delta>0$ and take $y\in M_1$ such that $||\widehat{y}-y||\leq \delta$. Let $z=d_1(y)\in M_2$, which has norm $||z||=||d_1(y)||=||d_1(y-\widehat{y})||$ bounded by $C_{d_1}\delta$, where $C_{d_1}$ is the norm of $d_1$. We can thus find some $y'\in M_1$ with $||y'||\leq DC_{d_1}\delta$ and $d_1(y')=z$. Replacing $y$ by $y-y'$, we can thus find $y\in \ker(d_1: M_1\to M_2)$ such that still $||\widehat{y}-y||\leq (1+DC_{d_1})\delta$; as $\delta$ was arbitrary, this gives the desired density.
+
+This implies that one can write $\widehat{y}$ as a sum $y_0+y_1+\ldots$ with $y_i\in \ker(d_1)$ and $||y_i||\leq \epsilon_i$ for $i>0$ for any given sequence of positive numbers $\epsilon_1\geq \epsilon_2\geq \ldots$. Indeed, we can inductively choose the $y_i$ so that $||\widehat{y}-y_0-\ldots-y_i||\leq \tfrac 12 \epsilon_{i+1}$, in which case $||y_i||\leq \tfrac 12(\epsilon_i+\epsilon_{i+1})\leq \epsilon_i$. Taking the sequence of $\epsilon_i$'s sufficiently small so that $\sum_{i>0} \epsilon_i\leq \tfrac {||\widehat{y}||}{2C} \epsilon$, we can lift all $y_i$ to $x_i$ with $||x_i||\leq C||y_i||$, and then $\widehat{x}=x_0+x_1+\ldots$ maps to $\widehat{y}$ and satisfies
 \[
-||m'||\leq ||m_0'||+C\sum_{i>0} \epsilon_i\leq C||m_0||+C\sum_{i>0} \epsilon_i\leq C||m||+2C\sum_{i>0} \epsilon_i\leq (C+\epsilon)||m||.
+||\widehat{x}||\leq ||x_0||+C\sum_{i>0} \epsilon_i\leq C||y_0||+C\sum_{i>0} \epsilon_i\leq C||\widehat{y}||+2C\sum_{i>0} \epsilon_i\leq (C+\epsilon)||\widehat{y}||.\qedhere
 \]
 \end{proof}
 
