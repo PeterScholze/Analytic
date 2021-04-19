@@ -1977,10 +1977,10 @@ that is functorial in the $\mathbb Z[T^{-1}]$-module $\mathbb Z[\overline{\mathc
 Unfortunately, the terms are not of the form $\mathbb Z[T^{-1}][E_i]$ with profinite $E_i$. To remedy this, we write the double complex as the filtered colimit of the double complexes
 \begin{equation}\label{eq:doublecomplex}
 \xymatrix{
-\ldots\ar[r] &\mathbb Z[T^{-1}][\overline{\mathcal M}_{r'}(S)^2_{\leq r'c_1c}]\ar[d]^{T^{-1}-[T^{-1}]}\ar[r] & \mathbb Z[T^{-1}][\overline{\mathcal M}_{r'}(S)_{\leq r'c}]\ar[d]^{T^{-1}-[T^{-1}]}\\
-\ldots\ar[r] &\mathbb Z[T^{-1}][\overline{\mathcal M}_{r'}(S)^2_{\leq c_1c}]\ar[r] & \mathbb Z[T^{-1}][\overline{\mathcal M}_{r'}(S)_{\leq c}]
+\ldots\ar[r] &\mathbb Z[T^{-1}][\overline{\mathcal M}_{r'}(S)^2_{\leq r's_1c}]\ar[d]^{T^{-1}-[T^{-1}]}\ar[r] & \mathbb Z[T^{-1}][\overline{\mathcal M}_{r'}(S)_{\leq r'c}]\ar[d]^{T^{-1}-[T^{-1}]}\\
+\ldots\ar[r] &\mathbb Z[T^{-1}][\overline{\mathcal M}_{r'}(S)^2_{\leq s_1c}]\ar[r] & \mathbb Z[T^{-1}][\overline{\mathcal M}_{r'}(S)_{\leq c}]
 }\end{equation}
-for varying $c>0$, where the constants $c_1,\ldots>0$ are fixed and chosen so that the transition maps are well-defined, cf.~Lemma~\ref{lem:constantsdeligne} in the appendix to this lecture.
+for varying $c>0$, where the constants $s_1,\ldots>0$ are fixed and chosen so that the transition maps are well-defined, cf.~Lemma~\ref{lem:constantsdeligne} in the appendix to this lecture.
 
 It is easy to understand what happens to the vertical part under mapping to $V$:
 
@@ -2016,13 +2016,13 @@ For integers $m\geq 0$ and constants $k \ge 1$, $c_0'>0$, the datum $(C_c^\bulle
 
 We apply this to
 \[
-C_c^\bullet: \widehat{V}(\overline{\mathcal M}_{r'}(S)_{\leq c})^{T^{-1}}\to \widehat{V}(\overline{\mathcal M}_{r'}(S)_{\leq c_1c}^2)^{T^{-1}}\to \ldots
+C_c^\bullet: \widehat{V}(\overline{\mathcal M}_{r'}(S)_{\leq c})^{T^{-1}}\to \widehat{V}(\overline{\mathcal M}_{r'}(S)_{\leq s_1c}^2)^{T^{-1}}\to \ldots
 \]
 given by mapping \eqref{eq:doublecomplex} into $\hat{V}$ and using Lemma~\ref{lem:Tinv}. Now we state the following result.
 
 \begin{theorem}\label{thm:explicit2} Fix radii $1>r'>r>0$. For any $m$ there is some $k$ and $c_0$ such that for all profinite sets $S$ and all $r$-normed $\mathbb Z[T^{\pm 1}]$-modules $V$, the system of complexes
 \[
-C_c^\bullet: \widehat{V}(\overline{\mathcal M}_{r'}(S)_{\leq c})^{T^{-1}}\to \widehat{V}(\overline{\mathcal M}_{r'}(S)_{\leq c_1c}^2)^{T^{-1}}\to \ldots
+C_c^\bullet: \widehat{V}(\overline{\mathcal M}_{r'}(S)_{\leq c})^{T^{-1}}\to \widehat{V}(\overline{\mathcal M}_{r'}(S)_{\leq s_1c}^2)^{T^{-1}}\to \ldots
 \]
 is $\leq k$-exact in degrees $\leq m$ for $c\geq c_0$.
 \end{theorem}
@@ -2048,16 +2048,16 @@ We can then define double complexes like \eqref{eq:doublecomplex}. Lemma~\ref{le
 
 \begin{theorem}\label{thm:explicit3} Fix radii $1>r'>r>0$. For any $m$ there is some $k$ such that for all polyhedral lattices $\Lambda$ there is a constant $c_0(\Lambda)>0$ such that for all profinite sets $S$ and all $r$-normed $\mathbb Z[T^{\pm 1}]$-modules $V$, the system of complexes
 \[
-C_{\Lambda,c}^\bullet: \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c})^{T^{-1}}\to \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c_1c}^2)^{T^{-1}}\to \ldots
+C_{\Lambda,c}^\bullet: \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c})^{T^{-1}}\to \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq s_1c}^2)^{T^{-1}}\to \ldots
 \]
 is $\leq k$-exact in degrees $\leq m$ for $c\geq c_0(\Lambda)$.
 \end{theorem}
 
-We note that the constants $c_1,c_2,\ldots$ implicit in the choice of the complex are chosen once and for all (after fixing $r$ and $r'$), and it can be ensured that the transition maps in the complex are norm-nonincreasing. Indeed, with the $c_i$ chosen as in Lemma~\ref{lem:constantsdeligne}, the maps
+We note that the constants $s_1,s_2,\ldots$ implicit in the choice of the complex are chosen once and for all (after fixing $r$ and $r'$), and it can be ensured that the transition maps in the complex are norm-nonincreasing. Indeed, with the $s_i$ chosen as in Lemma~\ref{lem:constantsdeligne}, the maps
 \[
-\widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c_ic}^{a_i})\to \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c_{i+1}c}^{a_{i+1}})
+\widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq s_ic}^{a_i})\to \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq s_{i+1}c}^{a_{i+1}})
 \]
-will have bounded norm, independently of $V$ (as they are a certain universal finite sum of maps induced by maps between the profinite sets in paranthesis, each of which induces a map of norm bounded by $1$), so on the subspace of $T^{-1}$-invariants, one can shrink the norm down to $1$ by shrinking $c_{i+1}$. We make and fix this choice of the $c_i$ for the statement of Theorem~\ref{thm:explicit3}, and the rest of the proof.
+will have bounded norm, independently of $V$ (as they are a certain universal finite sum of maps induced by maps between the profinite sets in paranthesis, each of which induces a map of norm bounded by $1$), so on the subspace of $T^{-1}$-invariants, one can shrink the norm down to $1$ by shrinking $s_{i+1}$. We make and fix this choice of the $s_i$ for the statement of Theorem~\ref{thm:explicit3}, and the rest of the proof.
 
 \begin{proposition}\label{prop:key} Fix an integer $m\geq 0$ and a constant $k$. Then there exists an $\epsilon>0$ and a constant $k_0$, depending (only) on $k$ and $m$, with the following property.
 
@@ -2169,7 +2169,7 @@ Using this decomposition of $x$, we decompose each term into $N$ summands. This 
 
 
 
-\begin{proof}[Proof of Theorem~\ref{thm:explicit3}] We argue by induction on $m$, so assume the result for $m-1$ (this is no assumption for $m=0$, so we do not need an induction start). This gives us some $k>1$ for which the statement of Theorem~\ref{thm:explicit3} holds true for $m-1$; if $m=0$, simply take any $k>1$. In the proof below, we will increase $k$ further in a way that depends only on $m$ and $r$. After this modified choice of $k$, we fix $\epsilon$ and $k_0$ as provided by Proposition~\ref{prop:key}. Moreover, we let $k'$ be the supremum of $k_0$ and the $c_i'$ from Lemma~\ref{lem:basehomotopy} (and~\ref{lem:homotopyNelements}) for $i=0,\ldots,m$. Finally, choose a positive integer $b$ so that $2k'(\tfrac r{r'})^b\leq \epsilon$, and let $N$ be the minimal power of $2$ that satisfies
+\begin{proof}[Proof of Theorem~\ref{thm:explicit3}] We argue by induction on $m$, so assume the result for $m-1$ (this is no assumption for $m=0$, so we do not need an induction start). This gives us some $k>1$ for which the statement of Theorem~\ref{thm:explicit3} holds true for $m-1$; if $m=0$, simply take any $k>1$. In the proof below, we will increase $k$ further in a way that depends only on $m$ and $r$. After this modified choice of $k$, we fix $\epsilon$ and $k_0$ as provided by Proposition~\ref{prop:key}. Moreover, we let $k'$ be the supremum of $k_0$ and the $s_i'$ from Lemma~\ref{lem:basehomotopy} (and~\ref{lem:homotopyNelements}) for $i=0,\ldots,m$. Finally, choose a positive integer $b$ so that $2k'(\tfrac r{r'})^b\leq \epsilon$, and let $N$ be the minimal power of $2$ that satisfies
 \[
 k'/N\leq (r')^b.
 \]
@@ -2199,52 +2199,52 @@ Consider the collection of double complexes $C_{\Lambda'^{(\bullet)},c}^\bullet$
 \[
 \Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c/N}^N\xrightarrow{\sum} \Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c},
 \]
-also the second condition is satisfied, with $k$ the maximum of the previous $k$ and some constant depending only on $m$ and $r$, provided we take $c_0$ large enough so that $(k-1)r'c_ic_0/N$ is at least the $d$ of Lemma~\ref{lem:key} for all $i=0,\ldots,m$ (so this choice of $c_0$ again depends on $\Lambda$). Indeed, then one can splice a surjection of profinite sets between the maps
+also the second condition is satisfied, with $k$ the maximum of the previous $k$ and some constant depending only on $m$ and $r$, provided we take $c_0$ large enough so that $(k-1)r's_ic_0/N$ is at least the $d$ of Lemma~\ref{lem:key} for all $i=0,\ldots,m$ (so this choice of $c_0$ again depends on $\Lambda$). Indeed, then one can splice a surjection of profinite sets between the maps
 \[
-\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c_ic/N}^{Na}\to\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c_ic}^a
+\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq s_ic/N}^{Na}\to\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq s_ic}^a
 \]
 and
 \[
-\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq kc_ic/N}^{Na}\to \Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq kc_ic}^a,
+\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq ks_ic/N}^{Na}\to \Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq ks_ic}^a,
 \]
 and so the transition map between the columns of that double complex factors over a similar complex arising from a simplicial hypercover of profinite sets, so the constants are bounded by Proposition~\ref{prop:normedcompletion}, Lemma~\ref{lem:Tinv}, and Proposition~\ref{prop:snakelemma}. At this point, we have finalized our choice of $k$ (and, as promised, this choice depended only on $m$ and $r$), and so we also finalized the constants $\epsilon$, $k'$ and $N$ from the first paragraph of the proof.
 
 Finally, to check the third condition, we use Lemma~\ref{lem:homotopyNelements} to find, in degrees $\leq m$, a homotopy between the two maps from the first row
 \[
-\widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c})^{T^{-1}}\to \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c_1c}^2)^{T^{-1}}\to \ldots
+\widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c})^{T^{-1}}\to \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq s_1c}^2)^{T^{-1}}\to \ldots
 \]
 to the second row
 \[
-\widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c/N}^N)^{T^{-1}}\to \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c_1c/N}^{2N})^{T^{-1}}\to \ldots
+\widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c/N}^N)^{T^{-1}}\to \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq s_1c/N}^{2N})^{T^{-1}}\to \ldots
 \]
 respectively induced by the addition $\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c/N}^N\to \Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c}$ (which is the map that forms part of the double complex), and the map that is the sum of the $N$ maps induced by the $N$ projection maps
 \[
 \Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c/N}^N\to \Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c/N}\subset \Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c}.
 \]
-By Lemma~\ref{lem:homotopyNelements}, we can find this homotopy between the complex for $k'c$ and the complex for $c$, by our choice of $k'\geq c_i'$ for $i=0,\ldots,m$. As $N$ is fixed, the homotopy is the universal homotopy from Lemma~\ref{lem:homotopyNelements}, and in particular its norm is bounded by some universal constant $H$.
+By Lemma~\ref{lem:homotopyNelements}, we can find this homotopy between the complex for $k'c$ and the complex for $c$, by our choice of $k'\geq s_i'$ for $i=0,\ldots,m$. As $N$ is fixed, the homotopy is the universal homotopy from Lemma~\ref{lem:homotopyNelements}, and in particular its norm is bounded by some universal constant $H$.
 
-Finally, it remains to establish the estimate \eqref{eq:homotopicmapsmall} on the homotopic map. We note that this takes $x\in \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq k'^2c_ic}^{a_i})^{T^{-1}}$ (with $i=q$ in the notation of \eqref{eq:homotopicmapsmall}) to the element
+Finally, it remains to establish the estimate \eqref{eq:homotopicmapsmall} on the homotopic map. We note that this takes $x\in \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq k'^2s_ic}^{a_i})^{T^{-1}}$ (with $i=q$ in the notation of \eqref{eq:homotopicmapsmall}) to the element
 \[
-y\in \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq k'c_ic/N}^{Na_i})^{T^{-1}}
+y\in \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq k's_ic/N}^{Na_i})^{T^{-1}}
 \]
-that is the sum of the $N$ pullbacks along the $N$ projection maps $\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq k'c_ic/N}^{Na_i}\to \Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq k'^2c_ic}^{a_i}$. We note that these actually take image in $\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c_ic}^{a_i}$ as $N\geq k'$, so this actually gives a well-defined map
+that is the sum of the $N$ pullbacks along the $N$ projection maps $\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq k's_ic/N}^{Na_i}\to \Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq k'^2s_ic}^{a_i}$. We note that these actually take image in $\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq s_ic}^{a_i}$ as $N\geq k'$, so this actually gives a well-defined map
 \[
-\widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c_ic}^{a_i})^{T^{-1}}\to \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq k'c_ic/N}^{Na_i})^{T^{-1}}.
+\widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq s_ic}^{a_i})^{T^{-1}}\to \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq k's_ic/N}^{Na_i})^{T^{-1}}.
 \]
-We need to see that this map is of norm $\leq \epsilon$. Now note that by our choice of $N$, we actually have $k'c_ic/N\leq (r')^b c_ic$, so this can be written as the composite of the restriction map
+We need to see that this map is of norm $\leq \epsilon$. Now note that by our choice of $N$, we actually have $k's_ic/N\leq (r')^b s_ic$, so this can be written as the composite of the restriction map
 \[
-\widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq c_ic}^{a_i})^{T^{-1}}\to \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq (r')^b c_ic}^{a_i})^{T^{-1}}
+\widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq s_ic}^{a_i})^{T^{-1}}\to \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq (r')^b s_ic}^{a_i})^{T^{-1}}
 \]
 and
 \[
-\widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq (r')^b c_ic}^{a_i})^{T^{-1}}\to \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq k'c_ic/N}^{Na_i})^{T^{-1}}.
+\widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq (r')^b s_ic}^{a_i})^{T^{-1}}\to \widehat{V}(\Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq k's_ic/N}^{Na_i})^{T^{-1}}.
 \]
 The first map has norm exactly $r^b$, by $T^{-1}$-invariance, and as multiplication by $T$ scales the norm with a factor of $r$ on $\widehat{V}$.\footnote{Here is where we use $r'>r$, ensuring different scaling behaviour of the norm on source and target.} The second map has norm at most $N$ (as it is a sum of $N$ maps of norm $\leq 1$). Thus, the total map has norm $\leq r^bN$. But by our choice of $N$, we have $r^bN\leq \epsilon$, giving the result.
 
 Thus, we can apply Proposition~\ref{prop:key}, and get the desired $\leq \max(k'^2,2k_0H)$-exactness in degrees $\leq m$ for $c\geq c_0$, where $k'$, $k_0$ and $H$ were defined only in terms of $k$, $m$, $r'$ and $r$, while $c_0$ depends on $\Lambda$ (but not on $V$ or $S$). This proves the inductive step.
 \end{proof}
 
-\begin{question} Can one make the constants explicit, and how large are they?\footnote{A back of the envelope calculation seems to suggest that $k$ is roughly doubly exponential in $m$, and that $N$ has to be taken of roughly the same magnitude.} Modulo the Breen-Deligne resolution, all the arguments give in principle explicit constants; and actually the proof of the existence of the Breen-Deligne resolution should be explicit enough to ensure the existence of bounds on the $c_i$ and $c_i'$.
+\begin{question} Can one make the constants explicit, and how large are they?\footnote{A back of the envelope calculation seems to suggest that $k$ is roughly doubly exponential in $m$, and that $N$ has to be taken of roughly the same magnitude.} Modulo the Breen-Deligne resolution, all the arguments give in principle explicit constants; and actually the proof of the existence of the Breen-Deligne resolution should be explicit enough to ensure the existence of bounds on the $s_i$ and $s_i'$.
 \end{question}
 
 This completes the proof of all results announced so far.
@@ -2330,15 +2330,15 @@ Z[M^{a_1}]\to\mathbb Z[M^{a_0}]\to M\to 0
 \]
 of an abelian group $M$; purely for notational convenience, we can and do assume that each term is of the form $\mathbb Z[M^{a_i}]$ (as opposed to a finite direct sum of such). The possibility of doing this follows from the proof of \cite[Theorem 4.10]{Condensed}, noting that a functor of the form $A\mapsto \mathbb Z[A^n]\oplus \mathbb Z[A^m]$ admits a surjection from the functor $A\mapsto \mathbb Z[A^{n+m}]\oplus \mathbb Z$; this gives a resolution where all terms are of the form $\mathbb Z[A^{a_i}]\oplus \mathbb Z^m$. Now pass to the quotient of these complexes corresponding to the map $0\to A$; this gives a complex all of whose terms are of the form $\mathbb Z[A^{a_i}]/\mathbb Z$. Noting that $\mathbb Z[A^{a_i}]$ is functorially isomorphic to $\mathbb Z[A^{a_i}]/\mathbb Z\oplus \mathbb Z$ (via splitting $0\to A^{a_i}\to 0$), we can then add an acyclic complex of $\mathbb Z$'s in each degree to get a resolution all of whose terms are of the form $\mathbb Z[A^{a_i}]$.
 
-\begin{lemma}\label{lem:constantsdeligne} There are universal constants $c_0=1,c_1,c_2,\ldots$ so that the Breen-Deligne resolution admits the subcomplex
+\begin{lemma}\label{lem:constantsdeligne} There are universal constants $s_0=1,s_1,s_2,\ldots$ so that the Breen-Deligne resolution admits the subcomplex
 \[
-C(M)_{\leq c}: \ldots \to \mathbb Z[M^{a_i}_{\leq c_ic}]\to\ldots\to\mathbb
-Z[M^{a_1}_{\leq c_1c}]\to\mathbb Z[M^{a_0}_{\leq c}]
+C(M)_{\leq c}: \ldots \to \mathbb Z[M^{a_i}_{\leq s_ic}]\to\ldots\to\mathbb
+Z[M^{a_1}_{\leq s_1c}]\to\mathbb Z[M^{a_0}_{\leq c}]
 \]
 for all pseudo-normed abelian group objects in any topos as above, and all $c>0$.
 \end{lemma}
 
-\begin{proof} Each differential in the Breen-Deligne resolution is a finite sum of maps induced by maps $M^{a_{i+1}}\to M^{a_i}$ given by some $a_i\times a_{i+1}$-matrix of integers. Given $c_i$, one can thus find some $c_{i+1}$ so that $M^{a_{i+1}}_{\leq c_{i+1}c}$ maps into $M^{a_i}_{\leq c_ic}$ for each of those finitely many maps, which gives the claim.
+\begin{proof} Each differential in the Breen-Deligne resolution is a finite sum of maps induced by maps $M^{a_{i+1}}\to M^{a_i}$ given by some $a_i\times a_{i+1}$-matrix of integers. Given $s_i$, one can thus find some $s_{i+1}$ so that $M^{a_{i+1}}_{\leq s_{i+1}c}$ maps into $M^{a_i}_{\leq s_ic}$ for each of those finitely many maps, which gives the claim.
 \end{proof}
 
 We also need some homotopies. More precisely, we start with the following homotopy.
@@ -2358,23 +2358,23 @@ h_i: \mathbb Z[M^{2a_i}]\to \mathbb Z[M^{a_{i+1}}].
 
 If $M$ is a pseudo-normed abelian group object in any topos, then $\sigma_1$ and $\sigma_2$ are well-defined as maps of complexes from
 \[
-C(M^2)_{\leq c/2}: \ldots \to \mathbb Z[M^{2a_i}_{\leq c_ic/2}]\to\ldots\to\mathbb
-Z[M^{2a_1}_{\leq c_1c/2}]\to\mathbb Z[M^{2a_0}_{\leq c/2}]
+C(M^2)_{\leq c/2}: \ldots \to \mathbb Z[M^{2a_i}_{\leq s_ic/2}]\to\ldots\to\mathbb
+Z[M^{2a_1}_{\leq s_1c/2}]\to\mathbb Z[M^{2a_0}_{\leq c/2}]
 \]
 to
 \[
-C(M)_{\leq c}: \ldots \to \mathbb Z[M^{a_i}_{\leq c_ic}]\to\ldots\to\mathbb
-Z[M^{a_1}_{\leq c_1c}]\to\mathbb Z[M^{a_0}_{\leq c}]
+C(M)_{\leq c}: \ldots \to \mathbb Z[M^{a_i}_{\leq s_ic}]\to\ldots\to\mathbb
+Z[M^{a_1}_{\leq s_1c}]\to\mathbb Z[M^{a_0}_{\leq c}]
 \]
-for all $c>0$. In that case, for all $i\geq 0$ there are universal constants $c_i'$ such that $h_i$ defines well-defined maps
+for all $c>0$. In that case, for all $i\geq 0$ there are universal constants $s_i'$ such that $h_i$ defines well-defined maps
 \[
-\mathbb Z[M^{2a_i}_{\leq c_ic/2}]\to \mathbb Z[M^{a_{i+1}}_{\leq
-c_i'c_{i+1}c}]
+\mathbb Z[M^{2a_i}_{\leq s_ic/2}]\to \mathbb Z[M^{a_{i+1}}_{\leq
+s_i's_{i+1}c}]
 \]
 for all $c>0$.
 \end{lemma}
 
-\begin{proof} This is a consequence of the proof of the existence of the Breen-Deligne resolution, proved in the same way as \cite[Proposition 4.17]{Condensed}. The existence of the constants $c_i'$ is again formal, as in the last lemma.
+\begin{proof} This is a consequence of the proof of the existence of the Breen-Deligne resolution, proved in the same way as \cite[Proposition 4.17]{Condensed}. The existence of the constants $s_i'$ is again formal, as in the last lemma.
 \end{proof}
 
 Now we need the following generalization to adding $N$ elements.
@@ -2391,24 +2391,24 @@ induced by addition $M^N\to M$, respectively the sum of the $N$ maps induced by 
 \[
 h_i^N: \mathbb Z[M^{Na_i}]\to \mathbb Z[M^{a_{i+1}}]
 \]
-which moreover satisfies the following bound, with the same constants $c_0',c_1',\ldots$ as in the previous lemma:
+which moreover satisfies the following bound, with the same constants $s_0',s_1',\ldots$ as in the previous lemma:
 
 If $M$ is a pseudo-normed abelian group object in any topos, then $\sigma_1$ and $\sigma_2$ are well-defined as maps of complexes from
 \[
-C(M^N)_{\leq c/N}: \ldots \to \mathbb Z[M^{Na_i}_{\leq c_ic/N}]\to\ldots\to\mathbb Z[M^{Na_1}_{\leq c_1c/N}]\to\mathbb Z[M^{Na_0}_{\leq c/N}]
+C(M^N)_{\leq c/N}: \ldots \to \mathbb Z[M^{Na_i}_{\leq s_ic/N}]\to\ldots\to\mathbb Z[M^{Na_1}_{\leq s_1c/N}]\to\mathbb Z[M^{Na_0}_{\leq c/N}]
 \]
 to
 \[
-C(M)_{\leq c}: \ldots \to \mathbb Z[M^{a_i}_{\leq c_ic}]\to\ldots\to\mathbb Z[M^{a_1}_{\leq c_1c}]\to\mathbb Z[M^{a_0}_{\leq c}]
+C(M)_{\leq c}: \ldots \to \mathbb Z[M^{a_i}_{\leq s_ic}]\to\ldots\to\mathbb Z[M^{a_1}_{\leq s_1c}]\to\mathbb Z[M^{a_0}_{\leq c}]
 \]
 for all $c>0$. In that case, $h_i^N$ defines well-defined maps
 \[
-\mathbb Z[M^{Na_i}_{\leq c_ic/N}]\to \mathbb Z[M^{a_{i+1}}_{\leq c_i'c_{i+1}c}]
+\mathbb Z[M^{Na_i}_{\leq s_ic/N}]\to \mathbb Z[M^{a_{i+1}}_{\leq s_i's_{i+1}c}]
 \]
 for all $c>0$.
 \end{lemma}
 
-\begin{proof} Let $N=2^m$. For each $j=0,\ldots,m-1$, the two maps from $C(M^{2^{j+1}})$ to $C(M^{2^j})$ from the previous lemma are homotopic, and we use the homotopy from that lemma. Composing homotopies (which amounts concretely to a certain sum) we get the desired homotopy from $C(M^{2^m})$ to $C(M)$. It follows directly from this construction that the constants $c_i'$ are unchanged.
+\begin{proof} Let $N=2^m$. For each $j=0,\ldots,m-1$, the two maps from $C(M^{2^{j+1}})$ to $C(M^{2^j})$ from the previous lemma are homotopic, and we use the homotopy from that lemma. Composing homotopies (which amounts concretely to a certain sum) we get the desired homotopy from $C(M^{2^m})$ to $C(M)$. It follows directly from this construction that the constants $s_i'$ are unchanged.
 \end{proof}
 
 \newpage
