@@ -1864,7 +1864,7 @@ We often use the following exactness property:
 Then $\widehat{M}_0\xrightarrow{\widehat{d}_0} \widehat{M}_1\xrightarrow{\widehat{d}_1} \widehat{M}_2\xrightarrow{\widehat{d}_2} \widehat{M}_3$ is a complex, and for all $\widehat{y}\in \widehat{M}_1$ and all $\epsilon>0$ there is some $\widehat{x}\in \widehat{M}_0$ with $\widehat{d}_1(\widehat{x})=\widehat{y}$ and $||\widehat{x}||\leq (C+\epsilon)||\widehat{y}||$.
 \end{proposition}
 
-\begin{proof} First, we claim that $\ker(d_1: M_1\to M_2)$ is dense in $\ker(\widehat{d}_1: \widehat{M}_1\to \widehat{M}_2)$. Pick any $\delta>0$ and take $y\in M_1$ such that $||\widehat{y}-y||\leq \delta$. Let $z=d_1(y)\in M_2$, which has norm $||z||=||d_1(y)||=||d_1(y-\widehat{y})||$ bounded by $C_{d_1}\delta$, where $C_{d_1}$ is the norm of $d_1$. We can thus find some $y'\in M_1$ with $||y'||\leq DC_{d_1}\delta$ and $d_1(y')=z$. Replacing $y$ by $y-y'$, we can thus find $y\in \ker(d_1: M_1\to M_2)$ such that still $||\widehat{y}-y||\leq (1+DC_{d_1})\delta$; as $\delta$ was arbitrary, this gives the desired density.
+\begin{proof} First, we claim that $\ker(d_1: M_1\to M_2)$ is dense in $\ker(\widehat{d}_1: \widehat{M}_1\to \widehat{M}_2)$. Pick any $\widehat{y}\in \ker(\widehat{d}_1)$ and $\delta>0$ and take $y\in M_1$ such that $||\widehat{y}-y||\leq \delta$. Let $z=d_1(y)\in M_2$, which has norm $||z||=||d_1(y)||=||d_1(y-\widehat{y})||$ bounded by $C_{d_1}\delta$, where $C_{d_1}$ is the norm of $d_1$. We can thus find some $y'\in M_1$ with $||y'||\leq DC_{d_1}\delta$ and $d_1(y')=z$. Replacing $y$ by $y-y'$, we can thus find $y\in \ker(d_1: M_1\to M_2)$ such that still $||\widehat{y}-y||\leq (1+DC_{d_1})\delta$; as $\delta$ was arbitrary, this gives the desired density.
 
 This implies that one can write $\widehat{y}$ as a sum $y_0+y_1+\ldots$ with $y_i\in \ker(d_1)$ and $||y_i||\leq \epsilon_i$ for $i>0$ for any given sequence of positive numbers $\epsilon_1\geq \epsilon_2\geq \ldots$. Indeed, we can inductively choose the $y_i$ so that $||\widehat{y}-y_0-\ldots-y_i||\leq \tfrac 12 \epsilon_{i+1}$, in which case $||y_i||\leq \tfrac 12(\epsilon_i+\epsilon_{i+1})\leq \epsilon_i$. Taking the sequence of $\epsilon_i$'s sufficiently small so that $\sum_{i>0} \epsilon_i\leq \tfrac {||\widehat{y}||}{2C} \epsilon$, we can lift all $y_i$ to $x_i$ with $||x_i||\leq C||y_i||$, and then $\widehat{x}=x_0+x_1+\ldots$ maps to $\widehat{y}$ and satisfies
 \[
@@ -2207,7 +2207,7 @@ and
 \[
 \Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq k\kappa_ic/N}^{Na}\to \Hom(\Lambda,\overline{\mathcal M}_{r'}(S))_{\leq k\kappa_ic}^a,
 \]
-and so the transition map between the columns of that double complex factors over a similar complex arising from a simplicial hypercover of profinite sets, so the constants are bounded by Proposition~\ref{prop:normedcompletion}, Lemma~\ref{lem:Tinv}, and Proposition~\ref{prop:snakelemma}. At this point, we have finalized our choice of $k$ (and, as promised, this choice depended only on $m$ and $r$), and so we also finalized the constants $\epsilon$, $k'$ and $N$ from the first paragraph of the proof.
+and so the transition map between the columns of that double complex factors over a similar complex arising from a simplicial hypercover of profinite sets, so the constants are bounded by Proposition~\ref{prop:normedcompletion}, Lemma~\ref{lem:Tinv}, and (the version for kernels instead of cokernels of) Proposition~\ref{prop:snakelemma}. At this point, we have finalized our choice of $k$ (and, as promised, this choice depended only on $m$ and $r$), and so we also finalized the constants $\epsilon$, $k'$ and $N$ from the first paragraph of the proof.
 
 Finally, to check the third condition, we use Lemma~\ref{lem:homotopyNelements} to find, in degrees $\leq m$, a homotopy between the two maps from the first row
 \[
@@ -2845,7 +2845,7 @@ Let us analyze this $\infty$-category. For the following proposition, it is agai
 
 \begin{proposition} The $\infty$-category $\AnRing$ admits all small colimits. The initial object is $\mathbb Z$ with $S\mapsto \mathbb Z[S]$. Sifted colimits commute with the functor $(\mathcal A,\mathcal M)\mapsto \mathcal M[S]$ to $\mathcal D_{\geq 0}(\Cond(\Ab))$. Pushouts are computed as follows:
 
-Let $(\mathcal B,\mathcal M_{\mathcal B})\leftarrow (\mathcal A,\mathcal M_{\mathcal A})\to (\mathcal C,\mathcal M_{\mathcal C})$ be a diagram in $\AnRing$. The pushout $(\mathcal B,\mathcal M_{\mathcal B})\otimes_{(\mathcal A,\mathcal M_{\mathcal A})}(\mathcal C,\mathcal M_{\mathcal C})=(\mathcal E,\mathcal M_{\mathcal E})$ of this diagram in $\AnRing$ exists. It can be defined as the normalization of an analytic ring structure on 
+Let $(\mathcal B,\mathcal M_{\mathcal B})\leftarrow (\mathcal A,\mathcal M_{\mathcal A})\to (\mathcal C,\mathcal M_{\mathcal C})$ be a diagram in $\AnRing$. The pushout $(\mathcal B,\mathcal M_{\mathcal B})\otimes_{(\mathcal A,\mathcal M_{\mathcal A})}(\mathcal C,\mathcal M_{\mathcal C})=(\mathcal E,\mathcal M_{\mathcal E})$ of this diagram in $\AnRing$ exists. It can be defined as the normalization of an analytic ring structure on
 \[
 \mathcal B\otimes_{\mathcal A} \mathcal C.
 \]
@@ -3174,12 +3174,12 @@ commutes. For this, we note that $\phi_T$ has the property that the composite
 is the naive map $\phi_T'$ constructed in the beginning. Note that $\pi_0\mathcal M[\ast]\to \check{H}^0(C_p,\pi_0 \mathcal M[\ast])$ is an isomorphism. We see that it suffices to see that the diagram
 \[\xymatrix{
 \pi_0 \mathcal M[T]\ar[r]^-{\phi_T'}\ar[d]^{\pi_0 \tilde{f}} & \check{H}^0(C_p,\pi_0 \mathcal M[T^p])\ar[d]^{\pi_0 \tilde{f}_p}\\
-\pi_0 \mathcal M[\ast]\ar[r]^-{\phi} & \check{H}^0(C_p,\pi_0 \mathcal M[\ast]) 
+\pi_0 \mathcal M[\ast]\ar[r]^-{\phi} & \check{H}^0(C_p,\pi_0 \mathcal M[\ast])
 }\]
 commutes, where $\tilde{f}_p: \mathcal M[T^p]\to \mathcal M[\ast]$ is the $p$-fold tensor product of $\tilde{f}$ in $\mathcal D_{\geq 0}(\mathcal A,\mathcal M)$. This is the composite of the commutative diagram
 \[\xymatrix{
 \pi_0 \mathcal M[T]\ar[r]^-{\phi_T'}\ar[d]^{\pi_0 \tilde{f}} & \check{H}^0(C_p,\pi_0 \mathcal M[T]\otimes_{\pi_0 \mathcal A}\ldots\otimes_{\pi_0 \mathcal A} \pi_0 \mathcal M[T])\ar[d]^{\pi_0 \tilde{f}^{\otimes p}}\\
-\pi_0 \mathcal M[\ast]\ar[r]^-{\phi} & \check{H}^0(C_p,\pi_0 \mathcal M[\ast]\otimes_{\pi_0 \mathcal A}\ldots\otimes_{\pi_0 \mathcal A} \mathcal M[\ast]) 
+\pi_0 \mathcal M[\ast]\ar[r]^-{\phi} & \check{H}^0(C_p,\pi_0 \mathcal M[\ast]\otimes_{\pi_0 \mathcal A}\ldots\otimes_{\pi_0 \mathcal A} \mathcal M[\ast])
 }\]
 (by functoriality of $M\to \check{H}^0(C_p,M\otimes_A\ldots\otimes_A M)$) and the diagram
 \[\xymatrix{
@@ -3271,7 +3271,7 @@ is conservative. We note that pullbacks of such finite families of maps are of t
 \begin{proof} This follows directly from Proposition~\ref{prop:descent}.
 \end{proof}
 
-If $f: \mathcal F\to \mathcal G$ is a map of functors from $\AnRing$ to anima, we write $\mathcal F\subset \mathcal G$ if for all analytic rings $(\mathcal A,\mathcal M)$, all fibres of 
+If $f: \mathcal F\to \mathcal G$ is a map of functors from $\AnRing$ to anima, we write $\mathcal F\subset \mathcal G$ if for all analytic rings $(\mathcal A,\mathcal M)$, all fibres of
 \[
 \mathcal F(\mathcal A,\mathcal M)\to \mathcal G(\mathcal A,\mathcal M)
 \]
