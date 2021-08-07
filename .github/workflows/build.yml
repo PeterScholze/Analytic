@@ -1,0 +1,29 @@
+on:
+  push:
+    branches:
+      - '*'
+    tags:
+      - '*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Compile TeX
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: Analytic.tex
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Analytic
+          path: ./Analytic.pdf
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: ./Analytic.pdf
